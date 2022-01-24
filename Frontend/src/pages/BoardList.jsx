@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { onSaveBoards,loadBoards } from '../store/board.actions';
-import { AppHeader } from "../cmps/app-header";
-import { BoardsList } from '../cmps/boards-list';
+import { AppHeader } from "../cmps/AppHeader";
+import { BoardsList } from '../cmps/BoardsList';
 import { ReactComponent as BoardIcon } from "../assets/img/board-icon.svg";
 import { ReactComponent as StarIcon } from "../assets/img/star-icon.svg";
 import { Loader } from '../cmps/Loader';

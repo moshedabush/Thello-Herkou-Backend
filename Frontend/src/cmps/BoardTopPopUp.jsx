@@ -4,7 +4,7 @@ import { onSaveBoard,onSaveBoards,loadBoards,loadBoard } from '../store/board.ac
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
 import { ChangeBackground } from './ChangeBackground';
-import { BoardsList } from './boards-list';
+import { BoardsList } from './BoardsList';
 
 class _TopPopUp extends React.Component {
 

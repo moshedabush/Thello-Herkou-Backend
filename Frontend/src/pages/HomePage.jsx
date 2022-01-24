@@ -4,7 +4,7 @@ import Product from "../assets/img/home-product.png";
 import { connect } from "react-redux";
 import { userService } from "../services/user.service";
 import { onSignup } from "../store/user.actions";
-import { HomeHeader } from "../cmps/home-header";
+import { HomeHeader } from "../cmps/HomeHeader";
 class _HomePage extends React.Component {
   state = {
   };

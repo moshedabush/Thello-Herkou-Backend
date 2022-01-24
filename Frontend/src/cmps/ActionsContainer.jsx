@@ -1,5 +1,4 @@
 import React from 'react';
-import { Cover } from './Cover';
 import { Covers } from './Covers';
 import { Dates } from './Dates';
 

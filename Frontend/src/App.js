@@ -6,7 +6,7 @@ import './assets/styles.scss'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="AppHeader">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.

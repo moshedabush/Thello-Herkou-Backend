@@ -1,7 +1,7 @@
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
-import { DialogModal } from './dialog-modal';
+import { DialogModal } from './DialogModal';
 import CreateIcon from '@mui/icons-material/Create';
 import { TaskQuickMenu } from './TaskQuickMenu';
 import { TaskLabelPreview } from './TaskLabelPreview';
