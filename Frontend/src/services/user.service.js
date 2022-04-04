@@ -48,9 +48,9 @@ async function login(userCred) {
     // const users = await storageService.query('user')
     // const user = users.find(user => user.username === userCred.username)
     const user = await httpService.post('auth/login', userCred)
-    return _saveLocalUser(user)
+    // return _saveLocalUser(user)
     // socketService.emit('set-user-socket', user._id);
-    // if (user) return _saveLocalUser(user)
+    if (user) return _saveLocalUser(user)
 }
 async function signup(userCred) {
     // const user = await storageService.post('user', userCred)
