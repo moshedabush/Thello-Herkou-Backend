@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb899676.css",
+    "main.js": "/static/js/main.aae4f4d1.js",
+    "static/js/377.b9268110.chunk.js": "/static/js/377.b9268110.chunk.js",
+    "static/media/home-product.png": "/static/media/home-product.366b05955d33d8f31c08.png",
+    "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.3caf631ca81184a3567b.ttf",
+    "static/media/SourceSansPro-SemiBold.ttf": "/static/media/SourceSansPro-SemiBold.3116714ecb256b1c74da.ttf",
+    "static/media/SourceSansPro-Bold.ttf": "/static/media/SourceSansPro-Bold.93f04112f9a2fd6fc084.ttf",
+    "static/media/SourceSansPro-Light.ttf": "/static/media/SourceSansPro-Light.c21efb744d64dd198433.ttf",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/hero.png": "/static/media/hero.e8878a5487f1b4b94d6f.png",
+    "static/media/left-logo.svg": "/static/media/left-logo.e0848e44c9a5597d1156241247585d01.svg",
+    "service-worker.js": "/service-worker.js",
+    "static/media/right-logo.svg": "/static/media/right-logo.b811544c6b1d5277317a78caf006e4d4.svg",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/description.svg": "/static/media/description.5eaca0fa85723a9648170e97fbdcc19e.svg",
+    "static/media/full-star.svg": "/static/media/full-star.217737c603de8ad551a2979a4f744b9f.svg",
+    "static/media/loader.svg": "/static/media/loader.9108aff064973ddc63d2030367b105f1.svg",
+    "static/media/login-signup-logo.svg": "/static/media/login-signup-logo.4da3c4fbe29f318d7b8af2c5dec58181.svg",
+    "index.html": "/index.html",
+    "static/media/home-icon.svg": "/static/media/home-icon.b3e2ad108a38667571df21fb9ad6540d.svg",
+    "static/media/board-icon.svg": "/static/media/board-icon.fe0c0ced499d37fcb8df1e9f6ff8b84b.svg",
+    "static/media/star-icon.svg": "/static/media/star-icon.01d29b3de1cdfa3efb6029d814ad25b9.svg",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.936761c406e6259e722f4e7f79959794.svg",
+    "main.fb899676.css.map": "/static/css/main.fb899676.css.map",
+    "main.aae4f4d1.js.map": "/static/js/main.aae4f4d1.js.map",
+    "377.b9268110.chunk.js.map": "/static/js/377.b9268110.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb899676.css",
+    "static/js/main.aae4f4d1.js"
+  ]
+}
