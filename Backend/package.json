@@ -1,5 +1,5 @@
 {
-    "name": "server",
+    "name": "backend",
     "version": "1.0.0",
     "description": "production ready server",
     "main": "server.js",
@@ -21,5 +21,8 @@
     },
     "devDependencies": {
         "nodemon": "^2.0.15"
-    }
+    },
+    "engines": {
+        "node": "17.x"
+     }
 }
