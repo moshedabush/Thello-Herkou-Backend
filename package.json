@@ -4,7 +4,7 @@
     "description": "production ready server",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "node app.js",
         "server:dev": "set NODE_ENV=development&&nodemon server.js",
         "server:prod": "set NODE_ENV=production&&node server.js"
     },
@@ -23,6 +23,6 @@
         "nodemon": "^2.0.15"
     },
     "engines": {
-        "node": "14.x"
+        "node": "17.x"
      }
 }
