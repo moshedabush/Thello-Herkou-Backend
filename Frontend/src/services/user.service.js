@@ -29,6 +29,7 @@ async function getById(userId) {
     // const user = await storageService.get('user', userId)
     const user = await httpService.get(`user/${userId}`)
     gWatchedUser = user;
+    console.log(gWatchedUser);
     return user;
 }
 function remove(userId) {

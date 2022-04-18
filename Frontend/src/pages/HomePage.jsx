@@ -11,10 +11,11 @@ class _HomePage extends React.Component {
   componentDidMount = () => {
     console.log("loggedInUser", userService.getLoggedinUser());
   };
-  onGuestLogin = async () => {
-    const guestUser = await userService.getById('u101')
+  onGuestLogin = async (ev) => {
+    ev.preventDefault()
+    const guestUser = await userService.getById('625debeecf826ab51b2ee08c')
     userService.login(guestUser)
-    this.props.history.push("/board/b101");
+    this.props.history.push("/board/625deba0cf826ab51b2ecf20");
     console.log("guestUser", guestUser);
   };
   render() {
@@ -36,8 +37,8 @@ class _HomePage extends React.Component {
                 </p>
                 <button
                   className="clean-link"
-                  onClick={() => {
-                    this.onGuestLogin();
+                  onClick={(ev) => {
+                    this.onGuestLogin(ev);
                   }}
                 >
                   Get started! Guest Mode
@@ -55,8 +56,8 @@ class _HomePage extends React.Component {
                 expand with more features as your teamwork grows. Manage projects, 
                 organize tasks, and build team spirit—all in one place.</p>
                 <button className="clean-link"
-                onClick={() => {
-                    this.onGuestLogin();
+                onClick={(ev) => {
+                    this.onGuestLogin(ev);
                   }}>
                     Start doing →
                     </button>
