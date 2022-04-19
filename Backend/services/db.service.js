@@ -5,7 +5,7 @@ module.exports = {
     getCollection
 }
 // Database Name
-const dbName = 'thelloDB'
+const dbName = 'thellodb'
 var dbConn = null
 
 async function getCollection(collectionName) {

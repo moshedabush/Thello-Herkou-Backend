@@ -13,9 +13,9 @@ class _HomePage extends React.Component {
   };
   onGuestLogin = async (ev) => {
     ev.preventDefault()
-    const guestUser = await userService.getById('625debeecf826ab51b2ee08c')
+    const guestUser = await userService.getById('625dfa9acf826ab51b3259eb')
     userService.login(guestUser)
-    this.props.history.push("/board/625deba0cf826ab51b2ecf20");
+    this.props.history.push("/board/625dfa61cf826ab51b324cb6");
     console.log("guestUser", guestUser);
   };
   render() {

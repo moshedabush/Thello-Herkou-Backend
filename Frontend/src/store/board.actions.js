@@ -104,7 +104,7 @@ console.log('newBoard',newBoard)
        return async dispatch => {
         try {
             dispatch({ type: 'SET_LOADING' })
-            const boards = await boardService.query(currUser._ID)
+            const boards = await boardService.query(currUser._id)
             dispatch({ type: 'SET_BOARDS', boards })
         } catch (err) {
             console.log('BoardActions: err in loadBoards', err)
