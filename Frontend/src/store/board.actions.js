@@ -33,7 +33,6 @@ export function onSaveBoards(boards) {
 
 export function loadBoards(userId) {
     return async dispatch => {
-        console.log('hi from load');
         try {
             dispatch({ type: 'SET_LOADING' })
             const boards = await boardService.query(userId)

@@ -18,8 +18,6 @@ async function getBoardById(boardId){
 }
 
 async function query(userId) {
-    console.log('query',userId);
-
     try {
         const boards = await httpService.get('board') 
         const filterBoards = boards.filter(board => {
@@ -46,6 +44,7 @@ async function save(board) {
         }
     }
 }
+
 async function saveBoards(board) {
     try {
         return await httpService.post('board', board)
