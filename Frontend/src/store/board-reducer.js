@@ -15,7 +15,6 @@ const initialState = {
         from:'',
     }
 }
-// console.log('initialState',initialState);
 export function boardReducer(state = initialState, action) {
 
     switch (action.type) {

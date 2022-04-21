@@ -31,6 +31,7 @@ toggleTopPopUp = ()=> {;
   };
   render() {
     const user = this.props.user;
+    const board = this.props.board;
     const {boards} = this.props;
     const {isTopPopUpOpen} = this.state
     if (!user) return <div></div>;
@@ -56,7 +57,8 @@ toggleTopPopUp = ()=> {;
           {
             <span className="user-info flex">
               <Link
-                to={`user/${user._id}`}
+                to={`${board._id}`}
+                // {`user/${user._id}`}
                 style={{ marginRight: 10 + "px", marginTop: 5 + "px" }}
               >
                 {user.username}

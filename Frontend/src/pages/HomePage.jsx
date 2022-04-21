@@ -9,14 +9,12 @@ class _HomePage extends React.Component {
   state = {
   };
   componentDidMount = () => {
-    console.log("loggedInUser", userService.getLoggedinUser());
   };
   onGuestLogin = async (ev) => {
     ev.preventDefault()
     const guestUser = await userService.getById('625dfa9acf826ab51b3259eb')
     userService.login(guestUser)
     this.props.history.push("/board/625dfa61cf826ab51b324cb6");
-    console.log("guestUser", guestUser);
   };
   render() {
     const sectionStyle = {

@@ -32,7 +32,6 @@ export class RootCmp extends React.Component {
             ))}
           </Switch>
        
-        {/* <AppFooter /> */}
       </div>
     );
   }

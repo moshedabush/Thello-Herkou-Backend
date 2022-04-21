@@ -11,7 +11,7 @@ class _BoardList extends React.Component {
  
   async componentDidMount() {
     try {
-    const userId = await this.props.loggedUser._ID;
+    const userId = await this.props.loggedUser._id;
     await this.props.loadBoards(userId);
      } catch (err) {
     console.log('err');
@@ -35,7 +35,6 @@ class _BoardList extends React.Component {
     onSaveBoards(boards);
   };
   onToggleBoard = (ev) =>{
-    // console.log('')
   }
 
   render() {
@@ -58,7 +57,6 @@ class _BoardList extends React.Component {
               <div className={"preview-title flex align-center"}>
                  <BoardIcon /> 
                 <h3 className="flex">
-                  {/* {loggedUser.username}'s Workspaces */}
                   Workspaces
                 </h3>
               </div>

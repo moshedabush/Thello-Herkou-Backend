@@ -19,7 +19,6 @@ class _Board extends React.Component {
     try {
       const { boardId } = this.props.match.params;
          await this.props.loadBoard(boardId);
-        //  console.log('this.props.location',this.props.location);
     } catch (err) {
       console.log('err');
     }

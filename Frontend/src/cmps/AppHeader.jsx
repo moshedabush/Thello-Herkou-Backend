@@ -6,16 +6,6 @@ import {ReactComponent as HomeIcon} from '../assets/img/home-icon.svg';
 import { onLogout } from '../store/user.actions.js';
 
 class _AppHeader extends React.Component {
-    // async componentDidMount() {
-    //     try {
-    //     const user = this.props.loggedUser;
-    //      } catch (err) {
-    //     console.log('err');
-    //   }
-    // }
-    // componentDidMount(){
-    //     this.setState({user: userService.getLoggedinUser()})
-    // }
     onLogout = () => {
         this.props.onLogout()
     }
