@@ -171,9 +171,9 @@ function _DialogModal(props) {
 
   const { style } = currTask;
 
-  console.log('currTask', currTask);
-  console.log('board in dialog', props.board);
-  console.log('props',props)
+  // console.log('currTask', currTask);
+  // console.log('board in dialog', props.board);
+  // console.log('props',props)
   return (
     <Dialog onClose={props.onClose} open={open} className={'DIALOG-CMP'}>
       {style.coverColor.length !== 0 && (
