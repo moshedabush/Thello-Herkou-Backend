@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { onSaveBoards,loadBoards } from '../store/board.actions';
+import { onSaveBoard,loadBoards } from '../store/board.actions';
 import { AppHeader } from "../cmps/AppHeader";
 import { BoardsList } from '../cmps/BoardsList';
 import { ReactComponent as BoardIcon } from "../assets/img/board-icon.svg";
@@ -29,10 +29,10 @@ class _BoardList extends React.Component {
 
   onToggleFavorite = (ev, boardId) => {
     ev.preventDefault()
-    const { boards,onSaveBoards } = this.props
+    const { boards,onSaveBoard } = this.props
     const board = boards.find(board => board._id === boardId)
     board.isFavorite = !board.isFavorite
-    onSaveBoards(boards);
+    onSaveBoard(board);
   };
   onToggleBoard = (ev) =>{
   }
@@ -73,10 +73,11 @@ function mapStateToProps(state) {
   return {
     loggedUser: state.userModule.user,
     boards: state.boardModule.boards,
+    board: state.boardModule.board,
   };
 }
 const mapDispatchToProps = {
-  onSaveBoards,
+  onSaveBoard,
   loadBoards,
 };
 

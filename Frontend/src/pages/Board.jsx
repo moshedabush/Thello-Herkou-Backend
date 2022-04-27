@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import { onSaveBoard, loadBoard } from '../store/board.actions.js';
+import { onSaveBoard, loadBoard, loadBoards } from '../store/board.actions.js';
 import { Column } from '../cmps/Column.jsx';
 import { GroupAdd } from '../cmps/GroupAdd.jsx';
 import { BoardHeader } from '../cmps/BoardHeader';
@@ -17,6 +17,8 @@ class _Board extends React.Component {
 
   async componentDidMount() {
     try {
+      const userId = await this.props.user._id;
+      await this.props.loadBoards(userId);
       const { boardId } = this.props.match.params;
          await this.props.loadBoard(boardId);
     } catch (err) {
@@ -154,6 +156,7 @@ class _Board extends React.Component {
 
 function mapStateToProps(state) {
   return {
+    user: state.userModule.user,
     board: state.boardModule.board,
     boards: state.boardModule.boards,
   };
@@ -162,6 +165,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
   onSaveBoard,
   loadBoard,
+  loadBoards,
 };
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board);

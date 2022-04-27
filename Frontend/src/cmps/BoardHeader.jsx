@@ -6,51 +6,52 @@ import { ReactComponent as ArrowDown } from "../assets/img/arrow-down.svg";
 import { loadBoards } from '../store/board.actions';
 import { onLogout } from "../store/user.actions.js";
 import { openQuickPopUp } from '../store/board.actions';
-import {TopPopUp} from '../cmps/BoardTopPopUp';
+import { TopPopUp } from '../cmps/BoardTopPopUp';
 
 class _BoardHeader extends React.Component {
   state = {
-    isTopPopUpOpen:false
-}
-async componentDidMount() {
-  try {
-  const userId = await this.props.user._id;
-  await this.props.loadBoards(userId);
-   } catch (err) {
-  console.log('err');
-}
-}  
+    isTopPopUpOpen: false
+  }
+  async componentDidMount() {
+  //   try {
+  //     const userId = await this.props.user._id;
+  //     await this.props.loadBoards(userId);
+  //   } catch (err) {
+  //     console.log('err');
+  //   }
+  }
 
-toggleTopPopUp = ()=> {;
-    const {isTopPopUpOpen} = this.state
-    this.setState({isTopPopUpOpen:!isTopPopUpOpen})  
-};
+  toggleTopPopUp = () => {
+    ;
+    const { isTopPopUpOpen } = this.state
+    this.setState({ isTopPopUpOpen: !isTopPopUpOpen })
+  };
 
-    onLogout = () => {
+  onLogout = () => {
     this.props.onLogout();
   };
   render() {
     const user = this.props.user;
     const board = this.props.board;
-    const {boards} = this.props;
-    const {isTopPopUpOpen} = this.state
+    const { boards } = this.props;
+    const { isTopPopUpOpen } = this.state
     if (!user) return <div></div>;
     return (
       <header className="board-header flex ">
         <div className="left-container flex">
-        <div className="logo flex align-center">
-          <NavLink to="/boardlist">
-            <BoardIcon />
-            <span>Thello</span>
-          </NavLink>
-        </div>
-        <div className="flex">
+          <div className="logo flex align-center">
+            <NavLink to="/boardlist">
+              <BoardIcon />
+              <span>Thello</span>
+            </NavLink>
+          </div>
+          <div className="flex">
             <div className="btn-board-header">
-            <a onClick={(ev)=> {this.toggleTopPopUp(ev)}}>Workspaces</a>
-            <ArrowDown />
+              <a onClick={(ev) => { this.toggleTopPopUp(ev) }}>Workspaces</a>
+              <ArrowDown />
             </div>
-            {isTopPopUpOpen && <TopPopUp boards={boards}/> } 
-        </div>
+            {isTopPopUpOpen && <TopPopUp boards={boards} />}
+          </div>
         </div>
 
         <nav>
@@ -82,7 +83,6 @@ toggleTopPopUp = ()=> {;
 
 function mapStateToProps(state) {
   return {
-    users: state.userModule.users,
     user: state.userModule.user,
     board: state.boardModule.board,
     boards: state.boardModule.boards,

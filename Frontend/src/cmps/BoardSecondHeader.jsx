@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import { onSaveBoards } from '../store/board.actions';
+import { onSaveBoard } from '../store/board.actions';
 import {SidePopUp} from '../cmps/SidePopUp'
 import { ReactComponent as StarIcon } from "../assets/img/star-icon.svg";
 
@@ -16,12 +16,11 @@ class _BoardSecondHeader extends React.Component {
         const {isSidePopUpOpen} = this.state
         this.setState({isSidePopUpOpen:!isSidePopUpOpen})  
     }
-    onToggleFavorite = (ev, boardId) => {
+    onToggleFavorite = (ev) => {
         ev.preventDefault()
-        const { boards,onSaveBoards } = this.props
-        const board = boards.find(board => board._id === boardId)
+        const { board,onSaveBoard } = this.props
         board.isFavorite = !board.isFavorite
-        onSaveBoards(boards);
+        onSaveBoard(board);
       };
     
     render() {
@@ -32,7 +31,7 @@ class _BoardSecondHeader extends React.Component {
                 <div className="left-nav">
                         <span className="board-title">{title}</span>
                         <span className={`board-star ${board.isFavorite ? 'favorite' : ''}`}
-                        onClick={(ev)=> {this.onToggleFavorite(ev,board._id)}}
+                        onClick={(ev)=> {this.onToggleFavorite(ev)}}
                         ><StarIcon/></span>
                 </div>
                 <div className="board-second-container">
@@ -58,8 +57,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    onSaveBoards,
-    // loadBoard,
+    onSaveBoard,
 };
 
 export const BoardSecondHeader = connect(mapStateToProps, mapDispatchToProps)(_BoardSecondHeader);
