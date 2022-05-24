@@ -5,7 +5,6 @@ import { onSaveBoard, loadBoard, loadBoards } from '../store/board.actions.js';
 import { Column } from '../cmps/Column.jsx';
 import { GroupAdd } from '../cmps/GroupAdd.jsx';
 import { BoardHeader } from '../cmps/BoardHeader';
-import { SidePopUp } from '../cmps/SidePopUp.jsx';
 import{BoardSecondHeader} from '../cmps/BoardSecondHeader';
 import { Loader } from '../cmps/Loader';
 
@@ -17,10 +16,10 @@ class _Board extends React.Component {
 
   async componentDidMount() {
     try {
+      const { boardId } = this.props.match.params;
+      await this.props.loadBoard(boardId);
       const userId = await this.props.user._id;
       await this.props.loadBoards(userId);
-      const { boardId } = this.props.match.params;
-         await this.props.loadBoard(boardId);
     } catch (err) {
       console.log('err');
     }
